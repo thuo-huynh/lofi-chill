@@ -1,13 +1,21 @@
-import todoListReducer from "./slice/todoListSlice";
-import modeSlice from "./slice/modeSlice";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { useDispatch } from "react-redux";
+import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import modeSlice from "./slice/modeSlice";
+import moodSlice from "./slice/moodSlice";
+import rainSlice from "./slice/rainSlice";
+import todoListSlice from "./slice/todoListSlice";
+import volumeSlice from "./slice/volumeSlice";
 export type RootState = ReturnType<typeof rootReducer>;
 
 export const useAppDispatch = () => useDispatch<typeof store.dispatch>();
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+
 const rootReducer = combineReducers({
-  todoList: todoListReducer,
+  todoList: todoListSlice,
   mode: modeSlice,
+  mood: moodSlice,
+  volume: volumeSlice,
+  rain: rainSlice,
 });
 
 /**

@@ -5,7 +5,7 @@ export interface ModeState {
 }
 
 const initialState: ModeState = {
-  mode: "day",
+  mode: "night",
 };
 
 const modeSlice = createSlice({
@@ -21,6 +21,6 @@ const modeSlice = createSlice({
   },
 });
 
-export const { setMode, changeDayNight } = modeSlice.actions;
-
-export default modeSlice.reducer;
+export const { actions, reducer } = modeSlice;
+export const { setMode, changeDayNight } = actions;
+export default reducer;

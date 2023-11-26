@@ -46,6 +46,6 @@ const todoListSlice = createSlice({
   },
 });
 
-export const { listAdd } = todoListSlice.actions;
-
-export default todoListSlice.reducer;
+export const { actions, reducer } = todoListSlice;
+export const { listAdd } = actions;
+export default reducer;

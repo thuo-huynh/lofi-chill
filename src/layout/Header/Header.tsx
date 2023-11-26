@@ -36,7 +36,7 @@ export const Header = () => {
       </Link>
       <div className="nav-menu">
         <a target="_blank" rel="noreferrer" href={CONSTANTS.AUTHOR_GITHUB_LINK}>
-          <i className="fab fab-github"></i>
+          <i className="fa-brands fa-github" />
           <span>GitHub</span>
         </a>
         <div onClick={dayNightHandler}>

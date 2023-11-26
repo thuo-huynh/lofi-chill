@@ -4,7 +4,8 @@
     left: 0;
     width: 100%;
     height: 10%;
-    background-image: linear-gradient(180deg, rgba(66, 65, 65, 0.8), transparent);;
+    z-index: 10;
+    background-image: linear-gradient(180deg, rgba(66, 65, 65, 0.8), transparent);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +49,6 @@
             padding: 0 8px;
 
             &:after {
-                //make the hover effect on the navbar menu
                 content: '';
                 height: 2px;
                 background: white;
@@ -64,7 +64,6 @@
         }
 
         &:hover {
-            //make the hover effect on the navbar menu
             span:after {
               transform: scaleX(1);
               opacity: 1;
