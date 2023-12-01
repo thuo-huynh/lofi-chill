@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useTimer } from "react-timer-hook";
 import { RootState, useAppSelector } from "../../store/store";
 import "./Home.scss";
+import RainToggleButton from "../../components/RainToggleButton/RainToggleButton";
 
 export const Home = () => {
   const [timerStart, setTimerStart] = useState(false);
@@ -19,16 +20,14 @@ export const Home = () => {
     "day-rain": "/assets/video/Day-rainny.mp4",
   };
 
-  const { seconds, minutes, hours, isRunning, pause, resume, restart } =
-    useTimer({
-      expiryTimestamp,
-      onExpire: () => setTimerStart(false),
-    });
+  const { seconds, minutes, hours, isRunning, pause, resume, restart } = useTimer({
+    expiryTimestamp,
+    onExpire: () => setTimerStart(false),
+  });
 
   const setTimerHandler = (hour: number, minute: number, second: number) => {
     const time = new Date();
-    const setupTimer =
-      Number(hour) * 3600 + Number(second) + Number(minute) * 60;
+    const setupTimer = Number(hour) * 3600 + Number(second) + Number(minute) * 60;
     time.setSeconds(time.getSeconds() + setupTimer);
     restart(time);
   };
@@ -46,6 +45,7 @@ export const Home = () => {
           <source src={src} type="video/mp4" />
         </video>
       ))}
+      <RainToggleButton />
     </>
   );
 };

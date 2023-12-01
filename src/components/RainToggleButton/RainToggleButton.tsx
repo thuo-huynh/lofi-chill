@@ -16,7 +16,7 @@ const RainToggleButton = () => {
   };
 
   return (
-    <div className="wrapper">
+    <div className="rain-toggle-container">
       {buttonClick && (
         <ReactAudioPlayer
           preload="auto"
