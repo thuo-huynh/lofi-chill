@@ -61,7 +61,7 @@ export default function ModifierBoard({
     { label: "Snow", src: "./assets/musics/snow.mp3", key: "snow" },
     { label: "Summer Storm", src: "./assets/musics/summer_storm.mp3", key: "summerStorm" },
     { label: "Fan", src: "./assets/musics/fan.mp3", key: "fan" },
-    { label: "Forest Night", src: "./assets/musics/forestNight.mp3", key: "forestNight" },
+    { label: "Forest Night", src: "./assets/musics/forest_night.mp3", key: "forestNight" },
     { label: "Wave", src: "./assets/musics/waves.mp3", key: "wave" },
     { label: "Wind", src: "./assets/musics/wind.mp3", key: "wind" },
     { label: "People", src: "./assets/musics/people_talk_inside.mp3", key: "people" },
