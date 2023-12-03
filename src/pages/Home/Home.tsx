@@ -3,6 +3,7 @@ import { useTimer } from "react-timer-hook";
 import { RootState, useAppSelector } from "../../store/store";
 import "./Home.scss";
 import RainToggleButton from "../../components/RainToggleButton/RainToggleButton";
+import ModifierBoard from "../../components/ModifierBoard/ModifierBoard";
 
 export const Home = () => {
   const [timerStart, setTimerStart] = useState(false);
@@ -46,6 +47,18 @@ export const Home = () => {
         </video>
       ))}
       <RainToggleButton />
+      <ModifierBoard
+        seconds={seconds}
+        minutes={minutes}
+        hours={hours}
+        isRunning={isRunning}
+        pause={pause}
+        resume={resume}
+        restart={restart}
+        setTimerHandler={setTimerHandler}
+        setTimerStart={setTimerStart}
+        timerStart={timerStart}
+      ></ModifierBoard>
     </>
   );
 };

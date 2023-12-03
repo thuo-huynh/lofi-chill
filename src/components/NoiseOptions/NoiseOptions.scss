@@ -1,0 +1,23 @@
+.noise-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 5px 0px;
+
+    .slider {
+        height: 10px;
+        color: #f3a952;
+        width: 180px;
+        margin: 0px 10px;
+    }
+
+    p {
+        margin-bottom: 5px;
+        color: white;
+    }
+
+    .MuiSlider-rail {
+        color: #4e5054;
+      }
+}
